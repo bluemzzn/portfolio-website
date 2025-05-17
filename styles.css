@@ -534,11 +534,16 @@ body{
 
 
 
-.timeline-line.verti-down::before,
+.timeline-line.verti-down::before{
+    height: 100%;
+    left: 12.2%;
+    top: -2px;
+    transform: none;
+}
 .timeline-line.verti-down1::before {
     height: 100%;
     left: 12.2%;
-    top: 0;
+    top: -18px;
     transform: none;
 }
 
@@ -547,7 +552,7 @@ body{
     height: 100%;
     right: 22%;
     left: auto;
-    top: 0;
+    top: -15px; 
     transform: none;
 }
 
@@ -577,13 +582,8 @@ body{
     left: calc(12.2% - 5px);
 }
 
-.verti-down3{
-
-    position: relative;
-}
-
 .verti-down3::after {
-    bottom: 0;
+    bottom: -380px;
     right: calc(22% - 5px);
 }
 
