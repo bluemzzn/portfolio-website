@@ -135,7 +135,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 200px;
 }
 
 .cover-content{
@@ -348,7 +348,7 @@ body{
 .about-section{
     display: flex;
     justify-content: center;
-    margin-bottom: 60px;
+    margin-bottom: 200px;
 }
 
 .about-topic{
@@ -482,6 +482,7 @@ body{
     display: flex;
     flex-direction: column;
     position: relative;
+    margin-bottom: 200px;
 }
 
 
@@ -502,10 +503,11 @@ body{
     align-items: center;
 }
 
-.verti-down::before,
-.verti-down2::before,
+.verti-down-left::before,
+.verti-down-left2::before,
+.verti-down-right::before,
 .verti-down1::before,
-.verti-down3::before {
+.verti-down2::before {
     content: '';
     position: absolute;
     width: 4px;
@@ -516,8 +518,6 @@ body{
     z-index: 1;
     position: absolute;
 }
-
-
 
 .timeline-line.hori-right::before,
 .timeline-line.hori-left::before {
@@ -532,23 +532,43 @@ body{
     z-index: 1;
 }
 
+/* First vertical line */
 
-
-.timeline-line.verti-down::before{
-    height: 100%;
+.timeline-line.verti-down-left::before{
+    height: 385px;
     left: 12.2%;
     top: -2px;
     transform: none;
 }
-.timeline-line.verti-down1::before {
-    height: 100%;
+
+/* Second vertical line */
+.timeline-line.verti-down-left2::before{
+    height: 395px;
     left: 12.2%;
-    top: -18px;
+    top: -13px;
     transform: none;
 }
 
-.timeline-line.verti-down2::before,
-.timeline-line.verti-down3::before {
+/* Vertical line right */
+.timeline-line.verti-down-right::before{
+    height: 400px;
+    right: 22%;
+    left: auto;
+    top: -15px; 
+    transform: none;
+   
+}
+
+/* Dot top */
+.timeline-line.verti-down1::before {
+    height: 100%;
+    left: 12.2%;
+    top: 0px;
+    transform: none;
+}
+
+/* Dot bottom */
+.timeline-line.verti-down2::before {
     height: 100%;
     right: 22%;
     left: auto;
@@ -556,6 +576,7 @@ body{
     transform: none;
 }
 
+/* Horizontal line */
 .timeline-line.hori-right::before,
 .timeline-line.hori-left::before {
     width: 65.8%;
@@ -567,11 +588,11 @@ body{
 
 /* Dots */
 .verti-down1::after,
-.verti-down3::after {
+.verti-down2::after {
     content: '';
     position: absolute;
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     background-color: #00ffff;
     border-radius: 50%;
     z-index: 2;
@@ -579,12 +600,12 @@ body{
 
 .verti-down1::after {
     top: 0;
-    left: calc(12.2% - 5px);
+    left: calc(12.2% - 6px);
 }
 
-.verti-down3::after {
+.verti-down2::after {
     bottom: -380px;
-    right: calc(22% - 5px);
+    right: calc(22% - 6px);
 }
 
 
@@ -617,7 +638,6 @@ body{
  }
 
 .left-timeline span{
-    
     right: 20%;
  }
 
@@ -629,15 +649,12 @@ body{
     left: 0;
     flex-direction: row;
     justify-content: flex-start;
-  
 }
 
 .right-timeline{
     left: 40%;
     flex-direction: row-reverse;
     justify-content: flex-end;
-
-
 }
 
 .experience{
@@ -659,8 +676,6 @@ body{
 }
 
 
-
-
 /* Skills Section*/
 
 .skill-section .container{
@@ -673,6 +688,7 @@ body{
     margin-top: 1rem;
     margin-bottom: 5rem;
     animation: fade-in 1s forwards;
+    margin-bottom: 200px;
 }
 @keyframes fade-in{
     0%{
@@ -770,7 +786,9 @@ body{
 
 /* Testimonials Section*/
 
-
+.testimonial-section{
+    margin-bottom: 200px;
+}
 .topic{
     display: flex;
     justify-content: center;
@@ -857,13 +875,12 @@ body{
 
 
 /* Contact Section*/
-.contact {
+.contact-section {
     position: relative;
     padding: 50px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
   }
   
   .contact .container {
