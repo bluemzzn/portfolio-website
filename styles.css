@@ -420,7 +420,21 @@ body{
 .about-content{
     width: 70%;
     margin-left: 50px;
-    
+}
+
+.about-content.show{
+    animation: slide-in-right 0.75s forwards;
+}
+
+@keyframes slide-in-right{
+    from{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
 .about-content p{
