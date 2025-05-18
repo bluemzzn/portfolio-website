@@ -10,6 +10,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
     overflow-x: hidden;
 }
 
@@ -694,7 +695,7 @@ body {
     width: 450px;
     color: white;
     padding: 40px 30px;
-    background-color: rgb(10, 10, 68);
+    background-color: rgb(10, 10, 43);
 }
 
 .experience h3 {
@@ -746,6 +747,175 @@ body {
 .timeline-line.show.hori-left::before {
     width: 65.8%;
     transform: translateX(0);
+}
+
+/* Timeline responsive */
+@media (max-width: 1024px) {
+    .timeline-section .container {
+        width: 80%;
+        padding: 0 2vw;
+        min-width: unset;
+        max-width: 100%;
+    }
+
+    .timeline-topic {
+        width: 100%;
+        text-align: center;
+        font-size: 65px;
+        margin-bottom: 80px;
+    }
+
+    .timeline-section img {
+        width: 180px;
+        height: 180px;
+        margin-left: 120px;
+    }
+
+
+    .timeline-line {
+        opacity: 0;
+    }
+
+
+    .timeline-line.verti-down1 {
+        position: absolute;
+        top: 130px;
+        left: 6%;
+        display: block;
+        height: 0;
+        transition: height 3s ease-in-out;
+        z-index: 0;
+        background-color: #00ffff;
+        width: 4px;
+    }
+
+    .timeline-line.show.verti-down1 {
+        opacity: 1;
+        height: 93%;
+    }
+
+    .experience {
+        width: 80%;
+        padding: 40px 30px;
+        margin-left: 120px;
+        font-size: 15px;
+    }
+
+    .experience h3 {
+        font-size: 28px;
+    }
+
+    .experience p {
+        font-size: 20px;
+    }
+
+    .left-timeline,
+    .right-timeline {
+        position: relative;
+        flex-direction: column !important;
+        align-items: flex-start;
+        gap: 35px;
+        left: 0;
+    }
+
+    .left-timeline span,
+    .right-timeline span {
+        position: relative;
+        top: -150px;
+        padding: 10px 8px;
+        font-size: 18px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+    }
+
+}
+
+/* Responsive Timeline Section for Phone */
+@media (max-width: 768px) {
+    .timeline-section .container {
+        width: 80%;
+        padding: 0 2vw;
+        min-width: unset;
+        max-width: 100%;
+    }
+
+    .timeline-topic {
+        width: 100%;
+        text-align: center;
+        font-size: 45px;
+        margin-bottom: 60px;
+    }
+
+    .timeline-section img {
+        width: 120px;
+        height: 120px;
+        margin-left: 100px;
+    }
+
+
+    .timeline-line {
+        opacity: 0;
+    }
+
+
+    .timeline-line.verti-down1 {
+        position: absolute;
+        top: 100px;
+        left: 8%;
+        display: block;
+        height: 0;
+        transition: height 3s ease-in-out;
+        z-index: 0;
+        background-color: #00ffff;
+        width: 4px;
+    }
+
+    .timeline-line.show.verti-down1 {
+        opacity: 1;
+        height: 93%;
+    }
+
+    .experience {
+        width: 10%;
+        margin-left: 60px;
+        font-size: 14px;
+    }
+
+    .experience h3 {
+        font-size: 20px;
+    }
+
+    .experience p {
+        font-size: 16px;
+    }
+
+    .left-timeline,
+    .right-timeline {
+        position: relative;
+        flex-direction: column !important;
+        align-items: flex-start;
+        gap: 25px;
+        left: 0;
+    }
+
+    .left-timeline span,
+    .right-timeline span {
+        position: relative;
+        top: -150px;
+        padding: 10px 8px;
+        font-size: 14px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+    }
+
+    .experience {
+        width: 80%;
+        padding: 30px 20px;
+        margin-left: 80px;
+        font-size: 15px;
+    }
 }
 
 
@@ -882,7 +1052,7 @@ body {
 .wrapper {
     max-width: 1420px;
     padding: 20px 10px;
-    margin: 0 50px 30px;
+    margin: 0 100px 30px;
     overflow: hidden;
 }
 
@@ -944,6 +1114,24 @@ body {
 
 .review {
     font-size: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+    .testimonial-section .container {
+        overflow-x: hidden;
+        justify-content: center;
+        align-items: center;
+        max-width: 1024px;
+        margin: 0;
+    }
+
+    .wrapper {
+        margin: 0 40px;
+        width: 80%;
+    }
+    .wrapper :where(.swiper-button-next) {
+        right: 1%;
+    }
 }
 
 @media screen and (max-width: 768px) {
