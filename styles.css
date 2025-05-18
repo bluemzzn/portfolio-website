@@ -534,13 +534,13 @@ body {
 .verti-down-left::before,
 .verti-down-left2::before,
 .verti-down-right::before,
+.verti-down-right2::before,
 .verti-down1::before,
 .verti-down2::before {
     content: '';
     position: absolute;
     width: 4px;
     background-color: #00ffff;
-    min-height: 380px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
@@ -561,31 +561,36 @@ body {
 }
 
 /* First vertical line */
-
 .timeline-line.verti-down-left::before {
-    height: 385px;
+    height: 0;
     left: 12.2%;
     top: -2px;
     transform: none;
+    transition: height 0.7s cubic-bezier(.77, 0, .18, 1);
 }
+
 
 /* Second vertical line */
 .timeline-line.verti-down-left2::before {
-    height: 395px;
+    height: 0;
     left: 12.2%;
     top: -13px;
     transform: none;
+    transition: height 0.7s cubic-bezier(.77, 0, .18, 1);
+    transition-delay: 0.7s;
 }
 
 /* Vertical line right */
-.timeline-line.verti-down-right::before {
-    height: 400px;
+.timeline-line.verti-down-right::before,
+.timeline-line.verti-down-right2::before {
+    height: 0;
     right: 22%;
     left: auto;
     top: -15px;
     transform: none;
-
+    transition: height 0.7s cubic-bezier(.77, 0, .18, 1);
 }
+
 
 /* Dot top */
 .timeline-line.verti-down1::before {
@@ -703,6 +708,46 @@ body {
     font-size: 20px;
 }
 
+/* Timeline Animation */
+.left-timeline.show {
+    animation: slide-in-left 0.75s forwards;
+}
+
+.right-timeline.show {
+    animation: slide-in-right 0.75s forwards;
+}
+
+/* Vertical line grow down */
+
+.timeline-line.show.verti-down-left::before {
+    height: 385px;
+}
+
+.timeline-line.show.verti-down-left2::before {
+    height: 395px;
+}
+
+.timeline-line.show.verti-down-right::before,
+.timeline-line.show.verti-down-right2::before,
+.timeline-line.show.verti-down2::before {
+    height: 395px;
+    transition-delay: 0.7s;
+}
+
+/* Horizontal line grow */
+.timeline-line.hori-right::before,
+.timeline-line.hori-left::before {
+    width: 0;
+    transform: translateX(60px);
+    transition: width 0.7s cubic-bezier(.77, 0, .18, 1);
+}
+
+.timeline-line.show.hori-right::before,
+.timeline-line.show.hori-left::before {
+    width: 65.8%;
+    transform: translateX(0);
+}
+
 
 /* Skills Section*/
 
@@ -755,7 +800,7 @@ body {
 @keyframes slide-in-left {
     from {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-50px);
     }
 
     to {

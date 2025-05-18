@@ -48,10 +48,21 @@ const observer = new IntersectionObserver((entries) =>{
     if(entry.isIntersecting){
       entry.target.classList.add('show');
     }
+    else{
+       entry.target.classList.remove('hidden');
+    }
   });
 });
 
 const hiddenElement = document.querySelectorAll('.hidden');
 hiddenElement.forEach((el) => observer.observe(el));
 
+
+
+function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top < window.innerHeight - 100 // 100px before it enters
+    );
+}
 
