@@ -506,6 +506,167 @@ body {
     font-size: 14px;
 }
 
+/* Responsive About section */
+@media (max-width: 1024px) {
+    .about-section {
+        margin-left: 50px;
+    }
+
+    .about-aside {
+        width: 28%;
+    }
+
+    .about-aside h3 {
+        font-size: 28px;
+    }
+
+    .about-aside h4 {
+        display: flex;
+        justify-content: center;
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    .about-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .about-me {
+        font-size: 15px;
+    }
+
+    .about-topic {
+        font-size: 72px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+    }
+
+    .about-card {
+        padding: 20px 15px;
+    }
+
+    .work-context p {
+        font-size: 13px;
+    }
+
+    /* 
+
+.about-card {
+    display: flex;
+    align-items: center;
+    background: #02091897;
+    border-radius: 20px;
+    max-width: 45%;
+    padding: 25px 20px;
+}
+
+.work-pic {
+    display: flex;
+    width: auto;
+    height: 60px;
+}
+
+.work-context {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.work-context h3 {
+    color: white;
+    font-size: 20px;
+    font-family: 'Space Grotesk';
+    margin-bottom: 8px;
+}
+
+
+     */
+
+}
+
+@media (max-width: 768px){
+    .about-section {
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+    .about-aside{
+        width: 40%;
+    }
+
+  .about-content {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .about-aside {
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .about-topic {
+    font-size: 48px;
+    text-align: center;
+  }
+
+  .about-content h2 {
+    display: flex;
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .about-content p {
+    width: 42%;
+    font-size: 15px;
+  }
+
+  .work-row {
+    margin-right: 60px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-card {
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .work-context {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .work-pic {
+    height: 50px;
+  }
+
+  .work-context h3 {
+    font-size: 18px;
+  }
+
+  .work-context p {
+    width: 100%;
+    font-size: 13px;
+  }
+}
+
+
+
 /* Timeline Section */
 .timeline-section .container {
     display: flex;
@@ -1129,6 +1290,7 @@ body {
         margin: 0 40px;
         width: 80%;
     }
+
     .wrapper :where(.swiper-button-next) {
         right: 1%;
     }
