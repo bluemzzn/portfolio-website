@@ -1478,6 +1478,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
+    padding: 20px;
     font-size: 18px;
     color: white;
     font-weight: 300;
@@ -1558,6 +1559,7 @@ body {
     color: white;
     outline: none;
     resize: none;
+
 }
 
 .input span {

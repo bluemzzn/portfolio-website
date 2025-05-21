@@ -13,6 +13,7 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
+
     <title>portfolio website</title>
 </head>
 
@@ -519,18 +520,23 @@
                     </ul>
                 </div>
                 <div class="contact-form ">
-                    <form action="">
+                    <form action="" method="POST" >
                         <h2>Send Message</h2>
                         <div class="input">
-                            <input type="text" name="" required>
+                            <input type="text" name="name" id="name" required>
                             <span>Full Name</span>
                         </div>
                         <div class="input">
-                            <input type="text" name="" required>
+                            <input type="text" name="email" id="email" required>
                             <span>Email</span>
                         </div>
+
                         <div class="input">
-                            <textarea required></textarea>
+                            <input type="text" name="subject" id="subject" required>
+                            <span>Subject</span>
+                        </div>
+                        <div class="input">
+                            <textarea name="message" id="message" required></textarea>
                             <span>Type your Message...</span>
                         </div>
                         <div class="input">
