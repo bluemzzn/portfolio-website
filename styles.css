@@ -71,7 +71,7 @@ body {
     margin: auto;
     display: flex;
     align-items: center;
-    height: 54px;
+    height: 100%;
 }
 .container {
     width: 90%;
@@ -82,15 +82,27 @@ body {
     justify-content: center;
 }
 
+.hamburger-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    padding: 1rem;
+    display: none;
+}
+
 .nav-menu {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
+
+
 .nav-list {
     list-style: none;
-    padding: 2.2rem 2.5rem;
+    padding: 0 1rem;
+    margin: 0 1rem;
 }
 
 .nav-link {
@@ -116,6 +128,34 @@ body {
 .topbar.slidedown .nav-link:hover {
     color: #FFF176;
     transform: scale(1);
+}
+
+@media screen and (max-width: 768px){
+    .topbar {
+        background: rgba(10, 10, 40, 0.98);
+        height: 40%;
+    }
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+    }
+
+    .hamburger-icon{
+        display: block;
+    }
+
+    .nav-list {
+        padding: 1.2rem 0;
+        text-align: center;
+    }
+
+    .nav-list a{
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width: 1024px){
@@ -436,12 +476,14 @@ body {
 }
 
 .about-aside h3 {
+    text-decoration: none;
     margin: 15px 0;
     color: white;
     font-size: 40px;
     font-weight: 500;
     font-family: 'Kanit';
 }
+
 
 .about-aside h4 {
     color: white;
@@ -529,6 +571,11 @@ body {
     background: #02091897;
     border-radius: 20px;
     padding: 25px 20px;
+    transition: box-shadow 0.3s;
+
+    &:hover{
+        box-shadow: 0 10px 12px rgba(18, 45, 144, 0.5);
+    }
 }
 
 .work-pic {
@@ -668,10 +715,8 @@ body {
 
 /* Timeline Section */
 .timeline-container {
-    display: flex;
     max-width: 1420px;
     flex-direction: column;
-    position: relative;
     margin-bottom: 200px;
     margin-left: 10rem;
 }
@@ -1101,7 +1146,6 @@ body {
 }
 
 .project-card {
-    overflow: hidden;
     padding: 40px 30px;
     margin-bottom: 15px;
     border-radius: 24px;
@@ -1124,7 +1168,7 @@ body {
 }
 
 .project-img {
-    width: auto;
+    width: 100%;
     height: 200px;
     transition: transform 0.4s;
 }
@@ -1139,6 +1183,24 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     font-family: 'Space Grotesk';
     color: white;
+    animation: slide-up 1s ease-in-out forwards;
+}
+
+
+
+.project-card:nth-child(1),
+.project-card:nth-child(3n+1){
+    animation-delay: 200ms;
+}
+
+.project-card:nth-child(2),
+.project-card:nth-child(3n+2){
+    animation-delay: 400ms;
+}
+
+.project-card:nth-child(3),
+.project-card:nth-child(3n+3){
+    animation-delay: 600ms;
 }
 
 .project-data h3 {
@@ -1258,13 +1320,13 @@ body {
 }
 
 .card.show {
-    animation: slide-in-left 1s ease forwards;
+    animation: slide-in-left 0.6s ease-in-out forwards;
 }
 
 @keyframes slide-in-left {
     from {
         opacity: 0;
-        transform: translateX(-50px);
+        transform: translateX(-60px);
     }
 
     to {
@@ -1279,29 +1341,27 @@ body {
 }
 
 .card:nth-child(1),
-.card:nth-child(6),
-.card:nth-child(11) {
+.card:nth-child(5n+1) {
     animation-delay: 200ms;
 }
 
 .card:nth-child(2),
-.card:nth-child(7),
-.card:nth-child(12) {
+.card:nth-child(5n+2) {
     animation-delay: 400ms;
 }
 
 .card:nth-child(3),
-.card:nth-child(8) {
+.card:nth-child(5n+3) {
     animation-delay: 600ms;
 }
 
 .card:nth-child(4),
-.card:nth-child(9) {
+.card:nth-child(5n+4) {
     animation-delay: 800ms;
 }
 
 .card:nth-child(5),
-.card:nth-child(10) {
+.card:nth-child(5n+5) {
     animation-delay: 1000ms;
 }
 
@@ -1391,7 +1451,14 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    transition: transform 0.6s;
+
+    &:hover{
+        transform: translateY(-20px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
 }
+
 
 .client-img {
     width: auto;
@@ -1445,6 +1512,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
 }
 
 .contact .container {
@@ -1457,7 +1525,7 @@ body {
 .contact-content {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: stretch;
     width: 100%;
     font-family: 'Kanit', sans-serif;
     gap: 20px;
@@ -1478,6 +1546,7 @@ body {
     display: flex;
     align-items: center;
     padding: 20px 0;
+    margin-top: 1rem;
     cursor: pointer;
 }
 
@@ -1516,6 +1585,7 @@ body {
 }
 
 .contact-text h3 {
+    margin-top: 1rem;
     font-weight: 500;
     color: skyblue;
 }
@@ -1581,16 +1651,15 @@ body {
 .input input,
 .input textarea {
     width: 100%;
-    padding: 5px 0;
+    padding: 8px;
     font-size: 18px;
-    margin: 10px 0;
+    margin: 20px 0;
     border: none;
     background: transparent;
     border-bottom: 2px solid skyblue;
     color: white;
     outline: none;
     resize: none;
-
 }
 
 .input span {
@@ -1654,6 +1723,10 @@ body {
         font-size: 1.75rem;
     }
 
+
+    .contact-form textarea{
+        resize: vertical;
+    }
     .contact-info h2 {
         font-size: 1.375rem;
         text-align: center;

@@ -9,6 +9,11 @@ window.addEventListener('scroll', function(){
     }
 })
 
+//Show & Hide Nav bar for mobile phone
+
+
+
+
 // Tesitimonial Swiper
 
 const swiper = new Swiper('.swiper', {

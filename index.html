@@ -20,8 +20,6 @@
 <body>
     <header class="topbar">
         <div class="nav-container">
-
-
             <div class="nav-menu">
                 <li class="nav-list"><a href="#landing-section" class="nav-link">Home</a></li>
                 <li class="nav-list"><a href="#about-section" class="nav-link">About me</a></li>
@@ -29,6 +27,8 @@
                 <li class="nav-list"><a href="#skill-section" class="nav-link">Skills</a></li>
                 <li class="nav-list"><a href="#contact-section" class="nav-link">Contact</a></li>
             </div>
+
+            <span onclick="showNavbar()"><a href="#" class="hamburger-icon"><i class="fas fa-bars"></i></a></span>
         </div>
     </header>
 
@@ -185,12 +185,12 @@
 
     </section>
 
-    <section class="project-section" id="project-section">
+    <section class="project-section hidden" id="project-section">
         <h1 class="topic">Projects</h1>
         <div class="container">
 
-            <div class="project-container">
-                <article class="project-card">
+            <div class="project-container hidden">
+                <article class="project-card hidden">
 
                     <a href="#" target="_blank" class="project-image">
                         <img src="pic/website.avif" alt="" class="project-img">
@@ -523,7 +523,7 @@
                 </div>
                 <div class="contact-form ">
                     <form action="" method="POST" >
-                        <h2>Send Message</h2>
+                        <h2>Get in Touch</h2>
                         <div class="input">
                             <input type="text" name="name" id="name" required>
                             <span>Full Name</span>
@@ -539,7 +539,7 @@
                         </div>
                         <div class="input">
                             <textarea name="message" id="message" required></textarea>
-                            <span>Type your Message...</span>
+                            <span>Type Your Message...</span>
                         </div>
                         <div class="input">
                             <input type="submit" value="Send" name="">
@@ -553,8 +553,10 @@
 
     <footer class="foot">
         <div class="copyright">
+            <div class="container">
             <img src="pic/copyright.png">
             <span>2025 By Kuljira Namjai | All rights Reserved.</span>
+            </div>  
         </div>
     </footer>
 
