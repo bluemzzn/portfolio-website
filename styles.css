@@ -1153,13 +1153,28 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+     text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Space Grotesk';
+    color: white;
+    
 }
 
 .project-card:hover .project-img {
     transform: scale(1.2);
 }
 
+.project-card.show{
+    animation: content-up 0.75s ease-in-out forwards;
+}
 
+@keyframes content-up{
+    from{
+        transform: translateY(0px);
+    }to{
+        transform: translateY(-50px);
+    }
+}
 .project-image {
     display: block;
     overflow: hidden;
@@ -1178,28 +1193,19 @@ body {
     font-family: 'Space Grotesk';
 }
 
-.project-card {
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    font-family: 'Space Grotesk';
-    color: white;
-    animation: slide-up 1s ease-in-out forwards;
-}
 
-
-
-.project-card:nth-child(1),
-.project-card:nth-child(3n+1){
+.project-card:nth-child(1).show,
+.project-card:nth-child(3n+1).show{
     animation-delay: 200ms;
 }
 
-.project-card:nth-child(2),
-.project-card:nth-child(3n+2){
+.project-card:nth-child(2).show,
+.project-card:nth-child(3n+2).show{
     animation-delay: 400ms;
 }
 
-.project-card:nth-child(3),
-.project-card:nth-child(3n+3){
+.project-card:nth-child(3).show,
+.project-card:nth-child(3n+3).show{
     animation-delay: 600ms;
 }
 
@@ -1531,6 +1537,7 @@ body {
     gap: 20px;
 }
 
+
 .contact-info {
     flex: 1 1 250px;
     display: flex;
@@ -1542,6 +1549,9 @@ body {
     border-radius: 30px;
 }
 
+.contact-info.show {
+    animation: slide-in-left 0.75s forwards;
+}
 .contact-box {
     display: flex;
     align-items: center;
@@ -1557,6 +1567,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-top: 1rem;
 }
 
 .icon b {
@@ -1626,6 +1637,10 @@ body {
     position: relative;
     padding: 40px 30px;
     box-sizing: border-box;
+}
+
+.contact-form.show{
+    animation: slide-in-right 0.75s forwards;
 }
 
 .contact-form form {
