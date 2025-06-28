@@ -83,14 +83,6 @@ body {
     justify-content: center;
 }
 
-.hamburger-icon {
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: white;
-    padding: 1rem;
-    display: none;
-}
 
 .nav-menu {
     display: flex;
@@ -109,7 +101,7 @@ body {
 .nav-link {
     display: inline-block;
     text-decoration-thickness: 0.15rem;
-    font-size: clamp(0.5rem, 1.05rem, 1.2rem);
+    font-size: clamp(0.8rem, 1.5vw, 1.2rem);
     font-family: 'Space Grotesk';
     color: #FFC107;
     transition: all 0.3s ease;
@@ -131,23 +123,43 @@ body {
     transform: scale(1);
 }
 
-/* 
-@media screen and (max-width: 768px){
+.nav-close,
+.hamburger-icon {
+    color: white;
+}
+
+@media screen and (max-width: 440px) {
     .topbar {
         background: rgba(10, 10, 40, 0.98);
-        height: 40%;
     }
+
+    .nav-container{
+        height: 52px;
+        width: 100%;
+    }
+
+
     .nav-menu {
+        top: -300%;
+        background: rgba(10, 10, 40, 0.98);
         flex-direction: column;
         align-items: center;
-        margin-top: 1rem;
         justify-content: center;
         width: 100%;
         position: relative;
+        transition: 0.2s ease;
+    }
+
+    .nav-menu.show-menu {
+        top: 300%;
     }
 
     .hamburger-icon{
-        display: block;
+        padding: 1.5rem;
+        position: absolute;
+        right: 0;
+        top: 0;
+        opacity: 1;
     }
 
     .nav-list {
@@ -155,16 +167,21 @@ body {
         text-align: center;
     }
 
-    .nav-list a{
+    .nav-list a {
         font-size: 1rem;
+    }
+
+    .nav-close {
+        position: absolute;
+        top: -11px;
+        padding-right: 1.5rem;
+        right: 0;
+        font-size: 18px;
+       z-index: 2;
     }
 }
 
-@media screen and (max-width: 1024px){
-    .nav-link{
-        font-size: 1rem;
-    }
-} */
+
 /* Animation on Scroll */
 .hidden {
     opacity: 0;
@@ -186,8 +203,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 300px;
-    /* Increased margin to prevent overlap */
+    margin-bottom: 8rem;
 }
 
 .cover-content {
@@ -222,14 +238,14 @@ body {
 /* Introduction */
 .content h3 {
     letter-spacing: 2px;
-    font-size: clamp(25px, 40px, 45px);
+    font-size: clamp(25px, 2.5vw, 45px);
     color: #00ffff;
     font-family: 'Kanit';
 }
 
 /* Name */
 .content h1 {
-    font-size: 100px;
+    font-size: clamp(60px, 5vw, 100px);
     background: linear-gradient(to right, #04a3a3, #00ffff);
     background-clip: text;
     color: transparent;
@@ -242,7 +258,7 @@ body {
 
 /* Profession */
 .content h4 {
-    font-size: clamp(30px, 40px, 50px);
+    font-size: clamp(30px, 2.5vw, 50px);
     color: white;
     font-family: 'Space Grotesk';
     line-height: 55px;
@@ -323,37 +339,12 @@ body {
         padding: 0;
         padding-left: 40px;
         width: 95%;
-
-    }
-
-    /* .content h3 {
-        letter-spacing: 1px;
-        font-size: 34px;
-        color: #00ffff;
-        font-family: 'Kanit';
-    }
-
-    .content h1 {
-        font-size: 60px;
-        color: #00ffff;
-        line-height: 80px;
-        margin: auto;
-    }
-
-    .content h4 {
-        font-size: 30px;
-    }
-
-    .content p {
-        font-size: 14px;
-        width: 100%;
-        margin-bottom: 15px;
     }
 
     .content a {
-        font-size: 13px;
+        font-size: 14px;
         padding: 8px 12px;
-    } */
+    }
 
     .landing-img {
         margin: 0 25px;
@@ -363,42 +354,11 @@ body {
 
 @media screen and (max-width: 990px) {
     .content {
-        margin: auto;
         padding: 0;
         padding-left: 40px;
         width: 90%;
 
     }
-
-    /* 
-    .content h3 {
-        letter-spacing: 1px;
-        font-size: 34px;
-        color: #00ffff;
-        font-family: 'Kanit';
-    }
-
-    .content h1 {
-        font-size: 60px;
-        color: #00ffff;
-        line-height: 80px;
-        margin: auto;
-    }
-
-    .content h4 {
-        font-size: 30px;
-    }
-
-    .content p {
-        font-size: 14px;
-        width: 100%;
-        margin-bottom: 15px;
-    }
-
-    .content a {
-        font-size: 13px;
-        padding: 8px 12px;
-    } */
 
     .landing-img {
         margin: 0 25px;
@@ -410,33 +370,15 @@ body {
 
     .cover-content {
         flex-direction: column;
+        margin-top: 5rem;
     }
 
     .content {
-        margin: auto;
+
+        margin: 0 2rem;
         padding: 0;
-        padding-left: 20px;
         width: 100%;
 
-    }
-
-    /* 
-    .content h3 {
-        letter-spacing: 1px;
-        font-size: 30px;
-        color: #00ffff;
-        font-family: 'Kanit';
-    }
-
-    .content h1 {
-        font-size: 60px;
-        color: #00ffff;
-        line-height: 80px;
-        margin: auto;
-    }
-
-    .content h4 {
-        font-size: 35px;
     }
 
     .content p {
@@ -446,9 +388,9 @@ body {
     }
 
     .content a {
-        font-size: 11.5px;
-        padding: 5px 10px;
-    } */
+        font-size: 14px;
+        padding: 10px 12px;
+    }
 
     .landing-img {
         padding: 1rem;
@@ -461,8 +403,7 @@ body {
 .about-section {
     display: flex;
     justify-content: center;
-    margin: 20rem 0 15rem 0;
-    /* Increased top margin for more spacing */
+    margin: 10rem 0;
 }
 
 .about-topic {
@@ -481,7 +422,7 @@ body {
     width: 25%;
     background: #02091897;
     border-radius: 20px;
-    padding: 40px 50px;
+    padding: 40px 30px;
 }
 
 .about-aside.show {
@@ -1274,7 +1215,7 @@ body {
 }
 
 .project-link a {
-    font-size: clamp(11px, 12px, 16px);
+    font-size: clamp(11px, 2.5vw, 16px);
     font-weight: 600;
     text-decoration: none;
     color: #FFD700;
@@ -1435,7 +1376,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
-    font-size: clamp(45px, 50px, 65px);
+    font-size: clamp(45px, 5vw, 65px);
     color: #00ffff;
     font-family: 'Kanit';
     font-weight: 450;

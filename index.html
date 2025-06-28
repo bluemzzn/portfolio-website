@@ -21,16 +21,26 @@
 <body>
     <header class="topbar">
         <div class="nav-container">
-            <div class="nav-menu">
+            <div class="nav-menu" id="nav-menu">
+                <div class="nav-close" id="nav-close">
+                   <i class="fa-solid fa-xmark"></i>
+               </div>
                 <li class="nav-list"><a href="#landing-section" class="nav-link">Home</a></li>
                 <li class="nav-list"><a href="#about-section" class="nav-link">About me</a></li>
                 <li class="nav-list"><a href="#project-section" class="nav-link">Projects</a></li>
                 <li class="nav-list"><a href="#skill-section" class="nav-link">Skills</a></li>
                 <li class="nav-list"><a href="#contact-section" class="nav-link">Contact</a></li>
+
+                  <!-- close button -->
             </div>
 
-            <span onclick="showNavbar()"><a href="#" class="hamburger-icon"><i class="fas fa-bars"></i></a></span>
+              
         </div>
+
+          <div class="hamburger-icon" id="hamburger-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
+            
     </header>
 
     <section class="landing-section hidden" id="landing-section">
@@ -308,7 +318,7 @@
                     </div>
                 </article>
 
-        
+
             </div>
 
         </div>
@@ -523,7 +533,7 @@
                     </ul>
                 </div>
                 <div class="contact-form hidden">
-                    <form action="" method="POST" >
+                    <form action="" method="POST">
                         <h2>Get in Touch</h2>
                         <div class="input">
                             <input type="text" name="name" id="name" required>
@@ -555,9 +565,9 @@
     <footer class="foot">
         <div class="copyright">
             <div class="container">
-            <img src="pic/copyright.png">
-            <span>2025 By Kuljira Namjai | All rights Reserved.</span>
-            </div>  
+                <img src="pic/copyright.png">
+                <span>2025 By Kuljira Namjai | All rights Reserved.</span>
+            </div>
         </div>
     </footer>
 
@@ -567,7 +577,7 @@
 
     <script src="event.js"></script>
 
-    
+
 
 </body>
 
