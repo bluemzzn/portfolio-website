@@ -36,7 +36,6 @@ if (navLink.length > 0) {
   navLink.forEach(link => {
     link.addEventListener('click', () => {
       navMenu.classList.remove('show-menu');
-      navHamburger.style.opacity = '1';
     });
   });
 }
