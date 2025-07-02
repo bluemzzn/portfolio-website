@@ -125,6 +125,7 @@ body {
 
 .nav-close,
 .hamburger-icon {
+    opacity: 0;
     color: white;
 }
 
@@ -159,6 +160,10 @@ body {
         position: absolute;
         right: 0;
         top: 0;
+        opacity: 1;
+    }
+
+    .nav-close{
         opacity: 1;
     }
 

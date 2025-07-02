@@ -28,6 +28,20 @@ if (navClose) {
   })
 }
 
+
+//Hide nav bar when click the link 
+const navLink = document.querySelectorAll('.nav-link');
+
+if (navLink.length > 0) {
+  navLink.forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('show-menu');
+      navHamburger.style.opacity = '1';
+    });
+  });
+}
+
+
 // Tesitimonial Swiper
 
 const swiper = new Swiper('.swiper', {
