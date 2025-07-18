@@ -33,7 +33,7 @@ https://bluemzzn.github.io/portfolio-website/
 - HTML5
 - CSS3 
 - Javascript
-- Swiper.jS
+- Swiper.js
  
 ## 🔌 External Libraries Used
 
