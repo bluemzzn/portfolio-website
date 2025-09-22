@@ -95,3 +95,12 @@ function isInViewport(el) {
   );
 }
 
+// light mode 
+var icon_mode = document.getElementById("icon_mode");
+
+icon_mode.onclick = () => {
+  document.body.classList.toggle("light-theme");
+  // if( document.body.classList.contains("light-theme")){
+  //   icon_mode.src
+  // }
+};

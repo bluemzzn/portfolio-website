@@ -13,6 +13,13 @@
     --nav-color: #FFC107;
 }
 
+
+.light-theme{
+    --background-color: rgb(255, 253, 216);
+    --nav-color: black;
+}
+
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
